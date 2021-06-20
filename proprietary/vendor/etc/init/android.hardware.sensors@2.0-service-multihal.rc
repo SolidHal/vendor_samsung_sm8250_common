@@ -1,0 +1,11 @@
+service vendor.sensors-hal-2-0-multihal /vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
+    class hal
+    user system
+    group system wakelock context_hub input
+    writepid /dev/cpuset/system-background/tasks
+    capabilities BLOCK_SUSPEND SYS_RESOURCE
+    rlimit rtprio 10 10
+
+on property:vendor.sensor.restart=1
+    setprop vendor.sensor.restart 0
+    restart vendor.sensors-hal-2-0-multihal
