@@ -26,26 +26,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-	name: "libsdm-disp-vndapis",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/libsdm-disp-vndapis.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libsdm-disp-vndapis.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
 	name: "libthermalclient",
 	owner: "samsung",
 	strip: {
@@ -65,52 +45,15 @@ cc_prebuilt_library_shared {
 	soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-	name: "libskeymaster4device",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm64: {
-			srcs: ["proprietary/vendor/lib64/libskeymaster4device.so"],
-		},
-	},
-	compile_multilib: "64",
-	check_elf_files: false,
-	prefer: true,
-	soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-	name: "libsdm-disp-apis.qti",
-	owner: "samsung",
-	strip: {
-		none: true,
-	},
-	target: {
-		android_arm: {
-			srcs: ["proprietary/system_ext/lib/libsdm-disp-apis.qti.so"],
-		},
-		android_arm64: {
-			srcs: ["proprietary/system_ext/lib64/libsdm-disp-apis.qti.so"],
-		},
-	},
-	compile_multilib: "both",
-	check_elf_files: false,
-	prefer: true,
-	system_ext_specific: true,
-}
-
 android_app_import {
-	name: "BiometricSetting",
+	name: "QCC-TR-UI",
 	owner: "samsung",
-	apk: "proprietary/system/priv-app/BiometricSetting/BiometricSetting.apk",
+	apk: "proprietary/vendor/app/QCC-TR-UI/QCC-TR-UI.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
+	soc_specific: true,
 }
 
 android_app_import {
@@ -136,40 +79,38 @@ android_app_import {
 }
 
 android_app_import {
-	name: "HotwordEnrollmentOKGoogleEx2HEXAGON",
+	name: "vklayer",
 	owner: "samsung",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentOKGoogleEx2HEXAGON/HotwordEnrollmentOKGoogleEx2HEXAGON.apk",
-	presigned: true,
+	apk: "proprietary/vendor/app/vklayer/vklayer.apk",
+	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
 	},
-	privileged: true,
-	product_specific: true,
+	soc_specific: true,
 }
 
-android_app_import {
-	name: "HotwordEnrollmentXGoogleEx2HEXAGON",
+prebuilt_etc_xml {
+	name: "android.hardware.dumpstate@1.1-service-lazy",
 	owner: "samsung",
-	apk: "proprietary/product/priv-app/HotwordEnrollmentXGoogleEx2HEXAGON/HotwordEnrollmentXGoogleEx2HEXAGON.apk",
-	presigned: true,
-	dex_preopt: {
-		enabled: false,
-	},
-	privileged: true,
-	product_specific: true,
-}
-
-dex_import {
-	name: "com.android.hotwordenrollment.common.util",
-	owner: "samsung",
-	jars: ["proprietary/system_ext/framework/com.android.hotwordenrollment.common.util.jar"],
-	system_ext_specific: true,
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service-lazy.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
 }
 
 prebuilt_etc_xml {
 	name: "android.hardware.gnss@2.1-service-qti",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "android.hardware.health@2.1-samsung",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
@@ -194,6 +135,33 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "android.hardware.usb@1.1-service.wahoo",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.usb@1.1-service.wahoo.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "engmode_manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/engmode_manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "hyper-default-sec",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/hyper-default-sec.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "lights-default-sec",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/lights-default-sec.xml",
@@ -206,6 +174,132 @@ prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.3-service.widevine",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "nxp.android.hardware.nfc@1.2-service",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "power-samsung",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/power-samsung.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "sec_c2_manifest_default",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/sec_c2_manifest_default.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vaultkeeper_manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vaultkeeper_manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.qti.hardware.servicetracker@1.2-service",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.hardware.servicetracker@1.2-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.authfw@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.authfw@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.hqm@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.hqm@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.thermal@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.tlc.atn@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.atn@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.tlc.ddar@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.ddar@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.tlc.hdm@1.1-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.hdm@1.1-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.tlc.iccc@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.iccc@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.tlc.tima@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.tima@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.wifi@2.0-service",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.wifi@2.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
