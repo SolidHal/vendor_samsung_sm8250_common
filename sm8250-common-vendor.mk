@@ -1884,7 +1884,6 @@ PRODUCT_PACKAGES += \
     lights-default-sec \
     manifest_android.hardware.drm@1.3-service.widevine \
     nxp.android.hardware.nfc@1.2-service \
-    power-samsung \
     sec_c2_manifest_default \
     vaultkeeper_manifest \
     vendor.qti.hardware.servicetracker@1.2-service \
