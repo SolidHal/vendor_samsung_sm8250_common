@@ -224,6 +224,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "vendor.samsung.hardware.thermal@1.0-manifest",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.thermal@1.0-manifest.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "vendor.samsung.hardware.tlc.atn@1.0-manifest",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.tlc.atn@1.0-manifest.xml",

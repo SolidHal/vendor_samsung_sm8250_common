@@ -209,6 +209,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.tlc.tima@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.tlc.tima@1.0-service \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.tlc.tima@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.tlc.tima@1.1-service \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.tlc.ucm@2.0-service \
+    vendor/samsung/sm8250-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.vibrator@2.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.vibrator@2.1-service \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/hw/vendor.samsung.hardware.wifi@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.samsung.hardware.wifi@2.0-service \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/iod:$(TARGET_COPY_OUT_VENDOR)/bin/iod \
     vendor/samsung/sm8250-common/proprietary/vendor/bin/iof_vendor:$(TARGET_COPY_OUT_VENDOR)/bin/iof_vendor \
@@ -366,6 +367,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput@1.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.thermal@1.0-service.rc \
+    vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.vibrator@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.vibrator@2.1-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.wifi@2.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
@@ -1965,6 +1967,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.tlc.tima@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.tlc.tima@1.1.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.tlc.ucm@2.0-impl.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.tlc.ucm@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.tlc.ucm@2.0.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.vibrator@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.vibrator@2.0.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.vibrator@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.vibrator@2.1.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.wifi.hostapd@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.wifi.hostapd@3.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.wifi.supplicant@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.wifi.supplicant@3.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.wifi@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.wifi@2.0.so \
@@ -2026,6 +2030,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.2-service \
     vendor.samsung.hardware.authfw@1.0-manifest \
     vendor.samsung.hardware.hqm@1.0-manifest \
+    vendor.samsung.hardware.thermal@1.0-manifest \
     vendor.samsung.hardware.tlc.atn@1.0-manifest \
     vendor.samsung.hardware.tlc.ddar@1.0-manifest \
     vendor.samsung.hardware.tlc.hdm@1.1-manifest \
