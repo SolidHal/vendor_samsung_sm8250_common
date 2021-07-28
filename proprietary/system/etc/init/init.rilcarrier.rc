@@ -1,0 +1,11 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+#RIL wants to change tcp_window_scaling
+on property:ril.tws=1
+    write /proc/sys/net/ipv4/tcp_window_scaling 1
+on property:ril.tws=0
+    write /proc/sys/net/ipv4/tcp_window_scaling 0

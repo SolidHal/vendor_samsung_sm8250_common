@@ -1,0 +1,121 @@
+#
+# To manage something related to OMC in RIL
+#
+
+# USA
+on property:ro.csc.sales_code=ACG
+    setprop ro.ril.ecclist "911,#911,*911"
+    setprop ro.com.android.dataroaming "true"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.cdma.home.operator.numeric 310000
+    setprop ro.cdma.home.operator.alpha "Default"
+
+on property:ro.csc.sales_code=AIO
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=ATT
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=APP
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=BST
+    setprop ro.ril.ecclist "911,#911,*911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+
+on property:ro.csc.sales_code=SPR
+    setprop ro.ril.ecclist "911,#911,*911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+
+on property:ro.csc.sales_code=VMU
+    setprop ro.ril.ecclist "911,#911,*911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+
+on property:ro.csc.sales_code=XAS
+    setprop ro.ril.ecclist "911,#911,*911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+
+on property:ro.csc.sales_code=CCT
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.ril.ecclist "911,*272911"
+
+on property:ro.csc.sales_code=CHA
+    setprop ro.ril.ecclist "911,*272911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+
+on property:ro.csc.sales_code=DSH
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=LRA
+    setprop ro.ril.ecclist "911,*272911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.com.android.dataroaming "true"
+    setprop ro.cdma.home.operator.numeric 310000
+    setprop ro.cdma.home.operator.alpha "Default"
+
+on property:ro.csc.sales_code=TMB
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=TMK
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=TFN
+    setprop ro.ril.ecclist "911,*272911"
+    setprop ro.vendor.sec.radio.def_network 8
+    setprop ro.cdma.home.operator.numeric 310000
+    setprop ro.cdma.home.operator.alpha "TracFone"
+
+on property:ro.csc.sales_code=USC
+    setprop ro.ril.ecclist "911,#911,*911,*272911"
+    setprop ro.vendor.sec.radio.def_network 10
+    setprop ro.cdma.home.operator.numeric "311580"
+    setprop ro.cdma.home.operator.alpha "U.S. Cellular"
+
+on property:ro.csc.sales_code=VZW
+    setprop ro.ril.ecclist "911,*272911"
+    setprop ro.vendor.sec.radio.def_network 10
+
+on property:ro.csc.sales_code=FKR
+    setprop ro.ril.ecclist "911,*272911"
+    setprop ro.vendor.sec.radio.def_network 11
+    setprop ro.com.android.dataroaming "true"
+    setprop telephony.lteOnCdmaDevice 1
+
+on property:ro.csc.sales_code=XAA
+    setprop ro.vendor.sec.radio.def_network 10
+
+on property:ro.csc.sales_code=XAR
+    setprop ro.vendor.sec.radio.def_network 9
+
+on property:ro.csc.sales_code=XAG
+    setprop ro.vendor.sec.radio.def_network 9
+
+# Depending on default_network
+# CDMA + EVDO + GSM + WCDMA + LTE
+on property:ro.telephony.default_network=10
+    setprop telephony.lteOnCdmaDevice 1
+
+# CDMA + EVDO + GSM + WCDMA + LTE + TDSCDMA
+on property:ro.telephony.default_network=22
+    setprop telephony.lteOnCdmaDevice 1
+
+# CDMA + EVDO + GSM + WCDMA + LTE + NR
+on property:ro.telephony.default_network=27
+    setprop telephony.lteOnCdmaDevice 1
+
+# CDMA + EVDO + GSM + WCDMA + LTE + TDSCDMA + NR
+on property:ro.telephony.default_network=33
+    setprop telephony.lteOnCdmaDevice 1
+
+# CDMA + EVDO + LTE
+on property:ro.telephony.default_network=8
+    setprop telephony.lteOnCdmaDevice 1
+
+# CDMA + EVDO + LTE + NR
+on property:ro.telephony.default_network=25
+    setprop telephony.lteOnCdmaDevice 1
