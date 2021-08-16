@@ -21,11 +21,15 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/system/lib/libmdf.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmdf.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libpacm_client.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libsecnativefeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecnativefeature.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib/vendor.samsung.hardware.miscpower@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.samsung.hardware.miscpower@2.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libfloatingfeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libfloatingfeature.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libmdf.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmdf.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libpacm_client.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libsecnativefeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecnativefeature.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.miscpower@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.miscpower@2.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.radio.bridge@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.radio.bridge@2.0.so \
+    vendor/samsung/sm8250-common/proprietary/system_ext/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/perfservice \
+    vendor/samsung/sm8250-common/proprietary/system_ext/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/perfservice.rc \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qcrilhook.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qcrilhook.odex \
@@ -275,10 +279,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.authfw@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.authfw@1.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.biometrics.fingerprint@3.0-service.rc \
-    vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.camera.provider@4.0-service_64.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.hqm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.hqm@1.0-service.rc \
-    vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.media.converter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.media.converter@1.0-service.rc \
-    vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.miscpower@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.miscpower@2.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.drk@2.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.engmode@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.engmode@1.0-service.rc \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.security.hdcp.keyprovisioning@1.0-service.rc \
@@ -359,6 +360,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/plmn_delta_attaio.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_attaio.bin \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/plmn_delta_usagsm.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_delta_usagsm.bin \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/plmn_se13.bin:$(TARGET_COPY_OUT_VENDOR)/etc/plmn_se13.bin \
+    vendor/samsung/sm8250-common/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/public.libraries.txt.backup:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt.backup \
     vendor/samsung/sm8250-common/proprietary/vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3HAB_AMB623TS01_WQHD.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ss_dsi_panel_S6E3HAB_AMB623TS01_WQHD.xml \
@@ -1008,6 +1010,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsnamrwb.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnamrwb.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsnap_vndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnap_vndk.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsns_device_mode_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsns_device_mode_stub.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib/libsns_fastRPC_util.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsns_fastRPC_util.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsns_low_lat_stream_stub.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsns_registry_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsns_registry_skel.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsnsapi.so \
@@ -1060,6 +1063,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libthirdparty_zoomtranslator_imp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthirdparty_zoomtranslator_imp.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthreadutils.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtime_genoff.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtinyxml2_1.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libtriplecam_image_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_image_optical_zoom.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libtriplecam_optical_zoom_control.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_optical_zoom_control.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib/libtriplecam_video_optical_zoom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtriplecam_video_optical_zoom.so \
@@ -1707,6 +1711,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsnpe_dsp_domains_v2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_dsp_domains_v2.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsnpe_wrapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnpe_wrapper.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsns_device_mode_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_device_mode_stub.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsns_fastRPC_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_fastRPC_util.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_low_lat_stream_stub.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsns_registry_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_registry_skel.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsapi.so \
@@ -1757,6 +1762,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libthirdparty_zoomtranslator_imp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthirdparty_zoomtranslator_imp.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libthreadutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthreadutils.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libtime_genoff.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtime_genoff.so \
+    vendor/samsung/sm8250-common/proprietary/vendor/lib64/libtinyxml2_1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtinyxml2_1.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libtlc_comm_atn.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlc_comm_atn.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libtlc_comm_ddar.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlc_comm_ddar.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/libtlc_comm_iccc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtlc_comm_iccc.so \
