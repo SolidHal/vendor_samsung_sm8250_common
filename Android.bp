@@ -163,6 +163,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+	name: "android.hardware.sensors@2.0-multihal",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
 	name: "engmode_manifest",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/engmode_manifest.xml",
@@ -202,6 +211,15 @@ prebuilt_etc_xml {
 	name: "nxp.android.hardware.nfc@1.2-service",
 	owner: "samsung",
 	src: "proprietary/vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "power-samsung",
+	owner: "samsung",
+	src: "proprietary/vendor/etc/vintf/manifest/power-samsung.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
