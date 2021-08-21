@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/system/bin/smdexe:$(TARGET_COPY_OUT_SYSTEM)/bin/smdexe \
     vendor/samsung/sm8250-common/proprietary/system/etc/bluetooth/bt_did.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_did.conf \
     vendor/samsung/sm8250-common/proprietary/system/etc/bluetooth/bt_stack.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_stack.conf \
+    vendor/samsung/sm8250-common/proprietary/system/etc/bluetooth/iop_bt.db:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/iop_bt.db \
     vendor/samsung/sm8250-common/proprietary/system/etc/init/init.ril_property.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.ril_property.rc \
     vendor/samsung/sm8250-common/proprietary/system/etc/init/init.rilcarrier.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.rilcarrier.rc \
     vendor/samsung/sm8250-common/proprietary/system/etc/init/init.rilchip.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.rilchip.rc \
@@ -1999,7 +2000,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.audio@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.audio@1.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.authfw@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.authfw@1.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.biometrics.fingerprint@3.0.so \
-    vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.bluetooth@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.bluetooth@2.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.camera.device@5.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.camera.device@5.0.so \
     vendor/samsung/sm8250-common/proprietary/vendor/lib64/vendor.samsung.hardware.camera.provider@4.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.samsung.hardware.camera.provider@4.0.so \
