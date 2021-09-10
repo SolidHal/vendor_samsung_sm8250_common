@@ -83,6 +83,48 @@ cc_prebuilt_library_shared {
 }
 
 android_app_import {
+	name: "MdecService",
+	owner: "samsung",
+	apk: "proprietary/system/app/MdecService/MdecService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "SimMobilityKit",
+	owner: "samsung",
+	apk: "proprietary/system/app/SimMobilityKit/SimMobilityKit.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
+	name: "EpdgService",
+	owner: "samsung",
+	apk: "proprietary/system/priv-app/EpdgService/EpdgService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
+	name: "ImsLogger",
+	owner: "samsung",
+	apk: "proprietary/system/priv-app/ImsLogger/ImsLogger.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "imsservice",
 	owner: "samsung",
 	apk: "proprietary/system/priv-app/imsservice/imsservice.apk",
@@ -135,6 +177,18 @@ android_app_import {
 		enabled: false,
 	},
 	soc_specific: true,
+}
+
+dex_import {
+	name: "framework-samsung",
+	owner: "samsung",
+	jars: ["proprietary/system/framework/framework-samsung.jar"],
+}
+
+dex_import {
+	name: "imsmanager",
+	owner: "samsung",
+	jars: ["proprietary/system/framework/imsmanager.jar"],
 }
 
 prebuilt_etc_xml {
