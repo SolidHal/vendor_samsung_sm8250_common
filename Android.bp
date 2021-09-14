@@ -125,6 +125,17 @@ android_app_import {
 }
 
 android_app_import {
+	name: "SecTelephonyProvider",
+	owner: "samsung",
+	apk: "proprietary/system/priv-app/SecTelephonyProvider/SecTelephonyProvider.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
+
+android_app_import {
 	name: "imsservice",
 	owner: "samsung",
 	apk: "proprietary/system/priv-app/imsservice/imsservice.apk",

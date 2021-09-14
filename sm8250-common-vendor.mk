@@ -7,8 +7,11 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/odm/etc/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
+    vendor/samsung/sm8250-common/proprietary/system/bin/at_distributor:$(TARGET_COPY_OUT_SYSTEM)/bin/at_distributor \
     vendor/samsung/sm8250-common/proprietary/system/bin/ddexe:$(TARGET_COPY_OUT_SYSTEM)/bin/ddexe \
     vendor/samsung/sm8250-common/proprietary/system/bin/imsd:$(TARGET_COPY_OUT_SYSTEM)/bin/imsd \
+    vendor/samsung/sm8250-common/proprietary/system/bin/scs:$(TARGET_COPY_OUT_SYSTEM)/bin/scs \
+    vendor/samsung/sm8250-common/proprietary/system/bin/sec_diag_uart_log:$(TARGET_COPY_OUT_SYSTEM)/bin/sec_diag_uart_log \
     vendor/samsung/sm8250-common/proprietary/system/bin/smdexe:$(TARGET_COPY_OUT_SYSTEM)/bin/smdexe \
     vendor/samsung/sm8250-common/proprietary/system/etc/bluetooth/bt_did.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_did.conf \
     vendor/samsung/sm8250-common/proprietary/system/etc/bluetooth/bt_stack.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/bluetooth/bt_stack.conf \
@@ -41,6 +44,8 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/privapp_whitelist_com.sec.imslogger.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imslogger.xml \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/privapp_whitelist_com.sec.imsservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp_whitelist_com.sec.imsservice.xml \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qcrilhook.xml \
+    vendor/samsung/sm8250-common/proprietary/system/etc/permissions/qti_telephony_hidl_wrapper.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_telephony_hidl_wrapper.xml \
+    vendor/samsung/sm8250-common/proprietary/system/etc/permissions/qti_telephony_utils.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/qti_telephony_utils.xml \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/rcsopenapi_library.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/rcsopenapi_library.xml \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/semextendedformat.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/semextendedformat.xml \
     vendor/samsung/sm8250-common/proprietary/system/etc/permissions/semmediatranscoder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/semmediatranscoder.xml \
@@ -79,42 +84,62 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/sm8250-common/proprietary/system/framework/semmediatranscoder.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/semmediatranscoder.jar \
     vendor/samsung/sm8250-common/proprietary/system/framework/semwifi-service.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/semwifi-service.jar \
     vendor/samsung/sm8250-common/proprietary/system/framework/vsimmanager.jar:$(TARGET_COPY_OUT_SYSTEM)/framework/vsimmanager.jar \
+    vendor/samsung/sm8250-common/proprietary/system/lib/libatparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libatparser.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib/libfactoryutil.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libfactoryutil.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libfloatingfeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libfloatingfeature.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libmdf.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libmdf.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib/libomission_avoidance.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libomission_avoidance.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libpacm_client.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/libsecnativefeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libsecnativefeature.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib/libvkmanager.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libvkmanager.so \
     vendor/samsung/sm8250-common/proprietary/system/lib/vendor.samsung.hardware.miscpower@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.samsung.hardware.miscpower@2.0.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib/vendor.samsung.hardware.security.vaultkeeper@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vendor.samsung.hardware.security.vaultkeeper@2.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptXHD_encoder.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaptX_encoder.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libaresdns.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libaresdns.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/libatparser.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libatparser.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libcurl2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libcurl2.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/libfactoryutil.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libfactoryutil.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libfloatingfeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libfloatingfeature.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libmdf.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libmdf.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/libomission_avoidance.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libomission_avoidance.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libpacm_client.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libpacm_client.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libresampler_ims.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libresampler_ims.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libsec-ims.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsec-ims.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/libsecnativefeature.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libsecnativefeature.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/libvkmanager.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libvkmanager.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.bluetooth.a2dpsink@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.bluetooth.a2dpsink@1.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.miscpower@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.miscpower@2.0.so \
     vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.radio.bridge@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.radio.bridge@2.0.so \
+    vendor/samsung/sm8250-common/proprietary/system/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so \
     vendor/samsung/sm8250-common/proprietary/system/priv-app/imsservice/lib/arm64/libsec-ims.so:$(TARGET_COPY_OUT_SYSTEM)/priv-app/imsservice/lib/arm64/libsec-ims.so \
     vendor/samsung/sm8250-common/proprietary/system_ext/bin/perfservice:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/perfservice \
     vendor/samsung/sm8250-common/proprietary/system_ext/etc/init/perfservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/perfservice.rc \
     vendor/samsung/sm8250-common/proprietary/system_ext/etc/seccomp_policy/perfservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/perfservice.policy \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qcrilhook.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qcrilhook.vdex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qti-telephony-hidl-wrapper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-hidl-wrapper.odex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qti-telephony-hidl-wrapper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-hidl-wrapper.vdex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qti-telephony-utils.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-utils.odex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/qti-telephony-utils.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/qti-telephony-utils.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.0-java.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm/vendor.qti.ims.rcsconfig-V1.1-java.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qcrilhook.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qcrilhook.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qcrilhook.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qcrilhook.vdex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qti-telephony-hidl-wrapper.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-hidl-wrapper.odex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qti-telephony-hidl-wrapper.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-hidl-wrapper.vdex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qti-telephony-utils.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-utils.odex \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/qti-telephony-utils.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/qti-telephony-utils.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.0-java.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.odex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.odex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.vdex:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/oat/arm64/vendor.qti.ims.rcsconfig-V1.1-java.vdex \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/qcrilhook.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qcrilhook.jar \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/qti-telephony-hidl-wrapper.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-hidl-wrapper.jar \
+    vendor/samsung/sm8250-common/proprietary/system_ext/framework/qti-telephony-utils.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/qti-telephony-utils.jar \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/uimservicelibrary.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/uimservicelibrary.jar \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.ims.factory-V1.0-java.jar \
     vendor/samsung/sm8250-common/proprietary/system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar:$(TARGET_COPY_OUT_SYSTEM_EXT)/framework/vendor.qti.ims.factory-V1.1-java.jar \
@@ -2182,6 +2207,7 @@ PRODUCT_PACKAGES += \
     SimMobilityKit \
     EpdgService \
     ImsLogger \
+    SecTelephonyProvider \
     imsservice \
     QCC-TR-UI \
     TimeService \
